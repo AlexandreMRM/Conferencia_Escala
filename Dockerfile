@@ -1,7 +1,7 @@
 FROM python:3.9-slim
 
 RUN apt-get update && apt-get install -y \
-    libgobject-2.0-0 \
+    libglib2.0-dev \
     libglib2.0-0 \
     libpango-1.0-0 \
     libcairo2 \
