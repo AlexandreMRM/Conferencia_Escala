@@ -24,4 +24,4 @@ COPY . .
 
 EXPOSE 8088
 
-CMD ["streamlit", "run", "main.py", "--server.port=8088", "--server.enableCORS=false"]
+CMD ["streamlit", "run", "app.py", "--server.port=8088", "--server.enableCORS=false"]
