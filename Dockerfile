@@ -1,7 +1,18 @@
 FROM python:3.9-slim
 
 # Instale pacotes de localidade e o locale-gen
-RUN apt-get update && apt-get install -y locales
+RUN apt-get update && apt-get install -y locales \
+    libgobject-2.0-0 \
+        libglib2.0-0 \
+        libpango-1.0-0 \
+        libcairo2 \
+        libpangocairo-1.0-0 \
+        libffi-dev \
+        libxml2 \
+        libxslt1-dev \
+        libjpeg62-turbo-dev \
+        zlib1g-dev \
+        && apt-get clean
 
 # Gera a localidade 'pt_BR.UTF-8'
 RUN sed -i '/pt_BR.UTF-8/s/^# //g' /etc/locale.gen && \
