@@ -263,6 +263,9 @@ def main():
             </head>
             <body>
             """
+        if 'botao_baixar' not in st.session_state:
+            st.session_state['botao_baixar'] = False
+            
         lista_dataframes_pdf = []
         if st.session_state['lista_dataframes_pdf'] is None or not st.session_state['lista_dataframes_pdf']:
             with col2:
